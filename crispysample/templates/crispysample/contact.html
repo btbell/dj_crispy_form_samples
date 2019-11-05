@@ -1,0 +1,23 @@
+{% extends "crispysample/base.html" %}
+
+
+  {% block title %}Contact Us{% endblock title %}
+
+  {% block content %}
+
+
+
+  {% if submitted %}
+      <p class="success">
+         Your message was submitted successfully. Thank you.
+     </p>
+
+ {% else %}
+     <form action="" method="post" novalidate>
+      {% load crispy_forms_tags %}
+      {% csrf_token %}
+      {{ crispy form }}
+    <button type="submit" class="btn btn-primary">Sign in</button>
+     </form>
+ {% endif %}
+ {% endblock content %}
