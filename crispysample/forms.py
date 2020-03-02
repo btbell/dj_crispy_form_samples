@@ -15,11 +15,11 @@ class BasicInfoForm(forms.ModelForm):
       'email'
     ]
 
-  def __init__(self, *args, **kwargs):
-    super().__init__(*args, **kwargs)
-    self.helper = FormHelper()
-    self.helper.form_method = 'post'
-    self.helper.add_input(Submit('submit', 'Save person'))
+  #def __init__(self, *args, **kwargs):
+    #super().__init__(*args, **kwargs)
+    #self.helper = FormHelper()
+    #self.helper.form_method = 'post'
+    #self.helper.add_input(Submit('submit', 'Save person'))
 
 class FeedbackForm(forms.Form):
   f_name = forms.CharField(max_length=30, label='First name')

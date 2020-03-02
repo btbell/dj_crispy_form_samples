@@ -3,13 +3,14 @@
 
 
 {% block content %}
-  <h1>Person Info</h1>
+  <h1>Crispy Person Info</h1>
   <h4><em>forms.ModelForm</em></h4>
   <hr class="mt-0 mb-4">
   <h5 class="mt-2">Please enter your information</h5>
   <form method="post" novalidate>
+    {% load crispy_forms_tags %}
     {% csrf_token %}
-    {{ form }}
+    {{ form | crispy }}
     <button type="submit" class="btn btn-success">Save person</button>
   </form>
 {% endblock %}
