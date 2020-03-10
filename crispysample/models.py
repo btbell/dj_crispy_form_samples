@@ -26,7 +26,7 @@ class Invite(models.Model):
   f_name = models.CharField(max_length=40,)
   l_name = models.CharField(max_length=70, null=False)
   email= models.EmailField(null=False, unique=True)
-  phone = PhoneNumberField()
+  phone = PhoneNumberField(blank=True)
 
   def __str__(self):
     return "%s %s" % (self.l_name, self.f_name)
